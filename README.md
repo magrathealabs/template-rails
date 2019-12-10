@@ -127,3 +127,19 @@ DANGER_GITHUB_API_TOKEN: XXX
 ```
 
 Take a look in the project [documentation](http://danger.systems/).
+
+**Pronto**
+
+Run it with `pronto run .`.
+
+If you want to use Pronto in your CI, please config the needed environment variables. Bellow is an example:
+
+```sh
+PRONTO_GITHUB_ACCESS_TOKEN: XXX
+PRONTO_PULL_REQUEST_ID: "$(echo $CIRCLE_PULL_REQUEST | grep -o -E '[0-9]+')"
+PRONTO_GITHUB_SLUG: "${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}"
+PRONTO_FORMAT: "%{msg} [%{runner}:%{level}]"
+PRONTO_VERBOSE: true
+```
+
+Take a look in the project [documentation](https://github.com/prontolabs/pronto).

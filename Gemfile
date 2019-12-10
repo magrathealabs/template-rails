@@ -3,28 +3,18 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.1'
-# Use postgresql as the database for Active Record
-gem 'pg', '>= 0.18', '< 2.0'
-# Use Puma as the app server
-gem 'puma', '~> 4.1'
-# Use SCSS for stylesheets
-gem 'sass-rails', '>= 6'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 4.0'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.7'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-# Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'rails', '~> 6.0.1' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'pg', '>= 0.18', '< 2.0' # Use postgresql as the database for Active Record
+gem 'puma', '~> 4.1' # Use Puma as the app server
+gem 'sass-rails', '>= 6' # Use SCSS for stylesheets
+gem 'webpacker', '~> 4.0' # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+gem 'jbuilder', '~> 2.7' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 
-# Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+# gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production
+# gem 'bcrypt', '~> 3.1.7' # Use Active Model has_secure_password
+# gem 'image_processing', '~> 1.2' # Use Active Storage variant
 
-# Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.2', require: false
+gem 'bootsnap', '>= 1.4.2', require: false # Reduces boot times through caching; required in config/boot.rb
 
 gem 'devise'
 gem 'devise-i18n'
@@ -33,16 +23,34 @@ gem 'rails-i18n'
 gem 'route_translator'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw] # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 
   gem 'factory_bot_rails'
   gem 'faker'
+
+  gem 'octokit', git: 'git@github.com:octokit/octokit.rb.git' # backward compatibility with faraday.
 
   gem 'danger'
   gem 'danger-github_ext'
   gem 'danger-simplecov_json'
   gem 'danger-todoist'
+
+  gem 'brakeman', require: false
+  gem 'bullet', require: false
+  gem 'fasterer', require: false
+  gem 'flay', require: false
+  gem 'rails_best_practices', require: false
+  gem 'reek', require: false
+
+  gem 'pronto'
+  gem 'pronto-brakeman', require: false
+  gem 'pronto-fasterer', require: false
+  gem 'pronto-flay', require: false
+  gem 'pronto-rails_best_practices', require: false
+  gem 'pronto-rails_schema', require: false
+  gem 'pronto-reek', require: false
+  gem 'pronto-rubocop', require: false
+  gem 'pronto-simplecov', require: false
 end
 
 group :development do
