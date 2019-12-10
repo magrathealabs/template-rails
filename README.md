@@ -93,6 +93,19 @@ heroku run rails db:migrate
 
 This project come with some defaults preconfigured:
 
+**Active Admin**
+
+This is an administration framework that automatically generate scaffold UIs. Take a look in the [docs](https://activeadmin.info/index.html).
+
+To register new models use:
+
+```sh
+rails generate active_admin:resource [ModelName]
+```
+
+This creates a file at `app/admin/model_names.rb` for configuring the resource.
+Refresh the web browser to see the interface.
+
 **Authentication**
 
 It has Devise installed and configured with `User` model, i18n files and the

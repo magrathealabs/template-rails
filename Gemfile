@@ -22,6 +22,8 @@ gem 'devise-i18n'
 gem 'rails-i18n'
 gem 'route_translator'
 
+gem 'activeadmin'
+
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw] # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 
@@ -36,7 +38,7 @@ group :development, :test do
   gem 'danger-todoist'
 
   gem 'brakeman', require: false
-  gem 'bullet', require: false
+  gem 'bullet'
   gem 'fasterer', require: false
   gem 'flay', require: false
   gem 'rails_best_practices', require: false
