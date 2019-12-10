@@ -38,6 +38,11 @@ group :development, :test do
 
   gem 'factory_bot_rails'
   gem 'faker'
+
+  gem 'danger'
+  gem 'danger-github_ext'
+  gem 'danger-simplecov_json'
+  gem 'danger-todoist'
 end
 
 group :development do
