@@ -50,3 +50,6 @@ Metrics/MethodLength:
 
 Style/ClassAndModuleChildren:
   EnforcedStyle: nested
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
