@@ -18,6 +18,7 @@ module TemplateRails
     ]
 
     config.generators do |generator|
+      generator.test_framework :rspec, fixtures: false
       generator.fixture_replacement :factory_bot
       generator.factory_bot dir: 'spec/factories', suffix: 'factory'
     end
