@@ -73,6 +73,9 @@ group :test do
   gem 'timecop'
   gem 'vcr'
   gem 'webmock'
+
+  gem 'simplecov', require: false
+  gem 'simplecov-json'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
