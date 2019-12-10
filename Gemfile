@@ -46,6 +46,11 @@ group :development do
 
   gem 'rubocop', require: false
   gem 'rubocop-rails'
+
+  gem 'guard', require: false
+  gem 'guard-rails', require: false
+  gem 'guard-rspec', require: false
+  gem 'guard-rubocop', require: false
 end
 
 group :test do
